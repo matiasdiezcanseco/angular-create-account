@@ -1,0 +1,9 @@
+.app__container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.app__body {
+  flex: 1;
+}

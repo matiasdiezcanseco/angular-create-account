@@ -1,0 +1,26 @@
+<div class="login">
+  <form #loginForm="ngForm" (ngSubmit)="onSubmitForm(loginForm.value)">
+    <app-typography variant="h1" text="Login"></app-typography>
+    <app-input
+      label="username"
+      name="username"
+      [(ngModel)]="username"
+      ngDefaultControl
+      required
+    ></app-input>
+    <app-input
+      label="password"
+      name="password"
+      type="password"
+      [(ngModel)]="password"
+      required
+      ngDefaultControl
+    ></app-input>
+    <br />
+    <app-button
+      text="Continuar"
+      type="submit"
+      [disabled]="!loginForm.valid"
+    ></app-button>
+  </form>
+</div>

@@ -1,0 +1,11 @@
+<div class="input">
+  <label *ngIf="label">{{ label }}</label>
+  <input
+    [ngClass]="error ? 'input--error' : ''"
+    [(ngModel)]="inputModel"
+    (ngModelChange)="inputModelChange.emit(inputModel)"
+    [name]="name"
+    [type]="type"
+  />
+  <p *ngIf="errorText && error" class="input__errorText">{{ errorText }}</p>
+</div>

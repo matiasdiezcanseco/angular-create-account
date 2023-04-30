@@ -1,0 +1,41 @@
+<div>
+  <app-typography
+    text="Bienvenido {{ (loginResponse$ | async)?.name }}"
+  ></app-typography>
+  <form
+    class="simulation-page-one__form"
+    #simulationForm="ngForm"
+    (ngSubmit)="onSimulationFormSubmit(simulationForm.value)"
+  >
+    <app-input
+      [(ngModel)]="debitAmount"
+      label="Debit Amount($)"
+      name="debitAmount"
+      ngDefaultControl
+      type="number"
+      required
+    ></app-input>
+    <br />
+    <app-input
+      [(ngModel)]="endDate"
+      label="End Date"
+      name="endDate"
+      ngDefaultControl
+      required
+    ></app-input>
+    <br />
+    <app-input
+      [(ngModel)]="debitDay"
+      label="Debit Day"
+      name="debitDay"
+      type="number"
+      ngDefaultControl
+      required
+    ></app-input>
+    <br />
+    <app-button
+      text="Continuar"
+      [disabled]="!simulationForm.valid"
+    ></app-button>
+  </form>
+</div>

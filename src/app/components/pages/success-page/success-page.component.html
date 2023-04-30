@@ -1,0 +1,20 @@
+<div *ngIf="loginResponse$ | async as loginResponse; else loading">
+  <app-typography
+    variant="h1"
+    text="Congrats! {{ loginResponse.name }}"
+  ></app-typography>
+</div>
+<div *ngIf="formResponse$ | async as formResponse; else loading">
+  <app-typography
+    text="Your new account is N {{ formResponse.account }}"
+  ></app-typography>
+</div>
+<div *ngIf="simulationResponse$ | async as simulationResponse; else loading">
+  <div>
+    <app-typography text="Goal" variant="h3"></app-typography>
+    <app-typography text="{{ simulationResponse.goal }}"></app-typography>
+  </div>
+</div>
+<ng-template #loading>
+  <app-typography text="Loading..."></app-typography>
+</ng-template>

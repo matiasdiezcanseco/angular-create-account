@@ -1,0 +1,63 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <app-input
+    type="text"
+    label="First Name"
+    name="firstName"
+    formControlName="firstName"
+    ngDefaultControl
+    [error]="getSingleFieldError('firstName')"
+    errorText="First Name is required"
+  ></app-input>
+  <br />
+  <app-input
+    type="text"
+    label="Last Name"
+    name="lastName"
+    formControlName="lastName"
+    ngDefaultControl
+    [error]="getSingleFieldError('lastName')"
+    errorText="Last Name is required"
+  ></app-input>
+  <br />
+  <app-input
+    type="text"
+    label="Email"
+    name="email"
+    formControlName="email"
+    ngDefaultControl
+    [error]="getSingleFieldError('email')"
+    errorText="Email is required"
+  ></app-input>
+  <br />
+  <app-input
+    type="text"
+    label="Phone"
+    name="phone"
+    formControlName="phone"
+    ngDefaultControl
+    [error]="getSingleFieldError('phone')"
+    errorText="Phone is required"
+  ></app-input>
+  <br />
+  <app-input
+    type="text"
+    label="Address"
+    name="address"
+    formControlName="address"
+    ngDefaultControl
+    [error]="getSingleFieldError('address')"
+    errorText="Address is required"
+  ></app-input>
+  <br />
+  <app-input
+    type="text"
+    label="City"
+    name="city"
+    formControlName="city"
+    ngDefaultControl
+    [error]="getSingleFieldError('city')"
+    errorText="City is required"
+  ></app-input>
+  <br />
+  <app-button type="submit" text="Continuar"></app-button>
+</form>

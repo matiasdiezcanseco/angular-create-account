@@ -1,0 +1,20 @@
+<div>
+  <div *ngIf="simulationResponse$ | async as simulationResponse; else loading">
+    <div>
+      <p>Goal</p>
+      <p>{{ simulationResponse.goal }}</p>
+    </div>
+    <div>
+      <p>Interest</p>
+      <p>{{ simulationResponse.interest }}</p>
+    </div>
+    <div>
+      <p>Gain</p>
+      <p>{{ simulationResponse?.gain }}</p>
+    </div>
+  </div>
+  <app-button text="Continuar" (click)="onNextPage()"></app-button>
+  <ng-template #loading>
+    <app-typography text="Loading..."></app-typography>
+  </ng-template>
+</div>

@@ -1,0 +1,15 @@
+.button {
+  padding: 0.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &--primary {
+    background-color: yellow;
+    color: black;
+  }
+
+  &--secondary {
+    background-color: blue;
+    color: white;
+  }
+}

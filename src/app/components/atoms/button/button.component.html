@@ -1,0 +1,11 @@
+<button
+  [ngClass]="{
+    button: true,
+    'button--primary': variant === 'primary',
+    'button--secondary': variant === 'secondary'
+  }"
+  [disabled]="disabled"
+>
+  {{ text }}
+</button>
+<app-typography *ngIf="loading" text="Loading..."></app-typography>
